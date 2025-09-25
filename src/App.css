@@ -1,0 +1,255 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Add Form Styling */
+.add-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 3fr 1fr;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.add-form input,
+.add-form select,
+.add-form textarea {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.add-form textarea {
+  resize: vertical;
+  min-height: 36px;
+}
+
+.add-form button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-form button:hover {
+  background-color: #0056b3;
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Application Display */
+.app-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.app-info {
+  flex: 1;
+}
+
+.app-main {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.app-details {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.applied {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status.interview {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status.offer {
+  background-color: #e8f5e8;
+  color: #388e3c;
+}
+
+.status.rejected {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.date {
+  color: #666;
+  font-size: 14px;
+}
+
+.app-notes {
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Edit Form Styling */
+.edit-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.edit-form textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 50px;
+}
+
+.edit-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.edit {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.edit:hover {
+  background-color: #e0a800;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}
+
+.save {
+  background-color: #28a745;
+  color: white;
+}
+
+.save:hover {
+  background-color: #218838;
+}
+
+.cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .edit-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-display {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .app-buttons {
+    align-self: flex-start;
+  }
+}
+
+/* Empty state */
+p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin: 40px 0;
+}
